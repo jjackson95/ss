@@ -1,6 +1,6 @@
 tasks:
   build-deps:
-    runner: ubuntu:16.04
+    runner: docker
     steps:
     - commands:
       - docker build . -t p
