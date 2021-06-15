@@ -1,0 +1,18 @@
+
+#tasks:
+# build-deps:
+#    runner: docker
+#   steps:
+#    - run: docker build .
+version: v2
+
+tasks:
+  unit-test:
+    steps:
+    - checkout
+    - commands: 
+      - docker build . -t p
+    - commands:
+    - run: docker run p
+      when: always
+      background: true
