@@ -1,6 +1,6 @@
 tasks:
   build-deps:
-    runner: razorci/ruby
+    runner: ubuntu:16.04
     steps:
     - commands:
       - docker build . -t p
